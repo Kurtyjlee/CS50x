@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>About me</title>
+    </head>
+    <body>
+        <!-- Allows user to say hi to the website -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector("#hello").addEventListener('click', function() {
+                    hello.style.backgroundColor= "#89CFF0";
+                    alert("Hello!");
+                });
+            });
+        </script>
+
+        <!-- Alert to promote my linkedin -->
+        <div class="alert alert-info">
+             <strong>Hi there!</strong> You should definitely check out my <a href="https://www.linkedin.com/in/kurtyjlee/" class="alert-link">Linkedin profile!</a>
+        </div>
+
+        <!-- Main heading of the page -->
+        <div class="header">
+            <h1>Kurt Lee</h1>
+            <p></p>
+            <button id="hello">Say Hello</button>
+        </div>
+
+        <div class="container">
+            <!-- First section of the page -->
+            <div class="section">
+                <h2>Biography</h2>
+                <p>Born and raised in
+                <a href="https://en.wikipedia.org/wiki/Singapore">Singapore.</a>
+                20 years old. Aspiring software engineer :)</p>
+            </div>
+
+            <div class="section">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Basketball</li>
+                    <li>Film photography</li>
+                    <li>Swimming</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                    <div class="inner_heading">
+                        <!-- Linked URL to the names for users to find out more about the schools -->
+                        <h4>Primary</h4>
+                        <a href="https://www.radinmaspri.moe.edu.sg/">Radin Mas Primary School</a>
+                        <h4>Secondary</h4>
+                        <a href="https://ganengsengsch.moe.edu.sg/">Gan Eng Seng School</a>
+                        <h4>Post-secondary</h4>
+                        <a href="https://acjc.moe.edu.sg/">Anglo-Chinese Junior College</a>
+                     </div>
+            </div>
+        </div>
+    </body>
+</html>

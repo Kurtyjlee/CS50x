@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <!-- stock.name allows you to refer to the name in the stock dict -->
+    <p> A share of {{ stock.name }} ({{ stock.symbol }}) costs {{ usd(stock.price) }}.</p>
+{% endblock %}

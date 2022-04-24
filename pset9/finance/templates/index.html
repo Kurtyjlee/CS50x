@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <!-- class is from bootstrap -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+
+            </script>
+
+            {% for stock in stocks %}
+            <tr>
+                <!-- stock is a dict -->
+                <td> {{ stock["symbol"] }} </td>
+                <td> {{ stock["name"] }} </td>
+                <td> {{ stock["totalshares"] }} </td>
+                <td> {{ usd(stock["price"]) }} </td>
+                <!-- total value of the stock -->
+                <td> {{ usd(stock["totalshares"] * stock["price"]) }} </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <!-- skip 3 columns -->
+                <td colspan="2"><td>
+                <td> Cash </td>
+                <td> {{ usd(cash) }} </td>
+            </tr>
+            <tr>
+                <td colspan="2"><td>
+                <td> Total </td>
+                <td> {{ usd(total) }} </td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
